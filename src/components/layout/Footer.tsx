@@ -70,6 +70,12 @@ const Footer = ({
                 Skills
               </a>
               <a
+                href=" /Porfolio/configurator"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                3D Configurator
+              </a>
+              <a
                 href="#about"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

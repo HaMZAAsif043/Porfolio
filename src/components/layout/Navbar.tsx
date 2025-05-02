@@ -10,7 +10,7 @@ import {
   Linkedin,
   ExternalLink,
 } from "lucide-react";
-
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -52,11 +52,12 @@ const Navbar = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/Porfolio/" }, 
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
+    { name: "3D Configurator", href: " /Porfolio/configurator" },
   ];
 
   useEffect(() => {

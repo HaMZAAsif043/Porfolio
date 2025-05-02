@@ -96,7 +96,7 @@ const HeroSection = ({
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-wrap gap-4 justify-center mb-12"
           >
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}>
               View My Work
             </Button>
             <Button size="lg" variant="outline" asChild className="gap-2">
