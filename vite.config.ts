@@ -12,10 +12,11 @@ if (process.env.TEMPO === "true") {
 
 // 🚀 Explicitly set the base for GitHub Pages
 export default defineConfig({
-  base: "/Porfolio_Hamza_Nextjs/", // 👈 Set this to your repository name!
+  base: "/Porfolio/",
   optimizeDeps: {
     entries: ["src/main.tsx", "src/tempobook/**/*"],
   },
+  assetsInclude: ["**/*.hdr", "**/*.exr"],
   plugins: [
     react({
       plugins: conditionalPlugins,
