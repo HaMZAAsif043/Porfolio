@@ -81,7 +81,6 @@ const InteractiveModelViewer = () => {
   const [activeControl, setActiveControl] = useState(null); // Track which control is active
   const [rim, setRim] = useState(false);
   const [progress, setProgress] = useState(0); // New state for progress
-  const [resources, setResources] = useState({ loaded: 0, total: 1 });
 
   const handleRefsReady = (refs, name) => {
     if (name === "car") {
@@ -322,16 +321,25 @@ const InteractiveModelViewer = () => {
     return null; // This component doesn't render anything
   };
 
-  // Update the progress calculation to use our custom tracking
+  // Simulate progress when loading starts
   useEffect(() => {
-    if (resources.total > 0) {
-      const calculatedProgress = Math.min(
-        100,
-        Math.floor((resources.loaded / resources.total) * 100)
-      );
-      setProgress(calculatedProgress);
+    if (loading) {
+      setProgress(0);
+      const interval = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 95) {
+            clearInterval(interval);
+            return 95; // Stop at 95% until loading is complete
+          }
+          return prev + Math.random() * 15;
+        });
+      }, 100);
+      
+      return () => clearInterval(interval);
+    } else {
+      setProgress(100);
     }
-  }, [resources]);
+  }, [loading]);
 
   return (
     <div className="flex flex-col min-h-screen w-full">
@@ -369,10 +377,7 @@ const InteractiveModelViewer = () => {
               gl.toneMapping = THREE.ACESFilmicToneMapping;
               gl.outputEncoding = THREE.sRGBEncoding;
             }}
-            onProgress={(e) => {
-              // Update our resources state with the progress data
-              setResources({ loaded: e.loaded, total: Math.max(1, e.total) });
-            }}
+
           >
             <AutoCamera modelRef={ModelRef} />
             <CameraRig

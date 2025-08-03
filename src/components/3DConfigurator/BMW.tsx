@@ -5,7 +5,7 @@ import * as THREE from "three"
 
 export const BMW = forwardRef( (props,ref)=> {
   const group = React.useRef()
-  const { nodes, materials, animations } = useGLTF('https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/BMW.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvQk1XLmdsYiIsImlhdCI6MTc0NjAwOTg4NiwiZXhwIjoyMDYxMzY5ODg2fQ.OfksNimjUTKgrHmz7Qm5imt2yTrVbR4d5UdDasuAWgs')
+  const { nodes, materials, animations } = useGLTF('https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049427/car-draco_lidzlg.glb')
   const { actions } = useAnimations(animations, group)
   const animationStates = useRef({});
   const leatherseatfr =useRef()// Keeps track of open/closed for each part
@@ -376,4 +376,4 @@ export const BMW = forwardRef( (props,ref)=> {
     </group>
   )
 })
-useGLTF.preload('https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/BMW.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvQk1XLmdsYiIsImlhdCI6MTc0NjAwOTg4NiwiZXhwIjoyMDYxMzY5ODg2fQ.OfksNimjUTKgrHmz7Qm5imt2yTrVbR4d5UdDasuAWgs')
+useGLTF.preload('https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049427/car-draco_lidzlg.glb')

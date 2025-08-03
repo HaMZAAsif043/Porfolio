@@ -205,29 +205,19 @@ const Navbar = ({
             </div>
 
             {/* Theme Toggle */}
-            <div className="ml-2">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    {theme === "dark" ? (
-                      <Moon className="h-5 w-5" />
-                    ) : (
-                      <Sun className="h-5 w-5" />
-                    )}
-                    <span className="sr-only">Toggle theme</span>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem
-                    onClick={onThemeToggle}
-                    className="flex items-center justify-between"
-                  >
-                    <span>Dark Mode</span>
-                    <Switch checked={theme === "dark"} />
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
+  
+
+
+    <div className="ml-2">
+      <Button variant="ghost" size="icon" onClick={onThemeToggle}>
+        {theme === "dark" ? (
+          <Moon className="h-5 w-5" />
+        ) : (
+          <Sun className="h-5 w-5" />
+        )}
+        <span className="sr-only">Toggle theme</span>
+      </Button>
+    </div>
           </nav>
 
           {/* Mobile Menu Button */}

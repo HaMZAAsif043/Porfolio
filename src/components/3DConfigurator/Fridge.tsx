@@ -27,7 +27,7 @@ const Fridge = React.forwardRef<
 >((props, ref) => {
   const group = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF(
-    'https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/Fridge.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvRnJpZGdlLmdsYiIsImlhdCI6MTc0NjAzMzI5MiwiZXhwIjoyMDYxMzkzMjkyfQ.mwr6elCtSLooE80fapMZQ2U0YDwzDq_qUqmv1p0ZCRU'
+    'https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049472/fridge-draco_gzkqke.glb'
   ) as GLTFResult;
   const { actions } = useAnimations(animations, group);
   // Track animation states for each action (false = closed, true = open)
@@ -131,6 +131,6 @@ const Fridge = React.forwardRef<
   );
 });
 
-useGLTF.preload('https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/Fridge.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvRnJpZGdlLmdsYiIsImlhdCI6MTc0NjAzMzI5MiwiZXhwIjoyMDYxMzkzMjkyfQ.mwr6elCtSLooE80fapMZQ2U0YDwzDq_qUqmv1p0ZCRU');
+useGLTF.preload('https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049472/fridge-draco_gzkqke.glb');
 
 export { Fridge };

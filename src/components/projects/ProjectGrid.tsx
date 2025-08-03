@@ -31,7 +31,7 @@ const ProjectGrid = ({
       title: "Promptopia",
       description:
         "Full-stack Next.js application for sharing AI prompts with the community. Features user authentication, CRUD operations, and search functionality.",
-      imageUrl: "/promptopia.png",
+      imageUrl: "/Portfolio/promptopia.png",
       technologies: ["Next.js", "MongoDB", "NextAuth", "Tailwind CSS"],
       liveUrl:
         "https://promtopia-main-l8hyo03va-hamzaasif043s-projects.vercel.app/",
@@ -82,7 +82,7 @@ const ProjectGrid = ({
         "Interactive Toyota Corolla 3D configurator with color customization, animated doors and hood, and 360° viewing angle.",
       imageUrl:
         "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-      technologies: ["React", "Canvas API", "JavaScript", "Tailwind CSS"],
+      technologies: ["React", "React ThreeFibre", "JavaScript", "Tailwind CSS"],
       liveUrl: "https://car-configurator-demo.vercel.app",
       githubUrl: "https://github.com/HaMZAAsif043/car-configurator",
       category: "3D Development",

@@ -19,14 +19,14 @@ interface HeroSectionProps {
 
 const HeroSection = ({
   name = "Hamza Asif",
-  title = "React & 3D Developer",
-  description = "I build interactive web experiences with React, Three.js, and modern web technologies. Specializing in 3D model configuration, AI integration, and full-stack development.",
+  title = "Frontend Developer | 3D Web | Full Stack | AI Enthusiast",
+  description = "Building immersive 3D + AI experiences at Blenspark. I create interactive web applications that blend cutting-edge design with deep tech.",
   socialLinks = {
     github: "https://github.com/HaMZAAsif043",
     linkedin: "https://linkedin.com/in/hamzaasif043",
     email: "mailto:hamzaasif043@gmail.com",
   },
-  resumeUrl = "/resume.pdf",
+  resumeUrl = "/Portfolio/Hamza_Asif_Resume_Updated-1.pdf",
 }: HeroSectionProps) => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-background">
@@ -50,33 +50,21 @@ const HeroSection = ({
 
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Badge
-              variant="outline"
-              className="mb-4 px-4 py-1 text-sm border-primary/20 bg-primary/5"
-            >
-              Portfolio
-            </Badge>
-          </motion.div>
-
+      
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-orange-400"
           >
-            Hi, I'm {name}
+            {name}
           </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl md:text-3xl font-medium mb-6 text-muted-foreground"
+            className="text-2xl md:text-4xl font-semibold mb-8 text-foreground/90"
           >
             {title}
           </motion.h2>
@@ -85,7 +73,7 @@ const HeroSection = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="max-w-2xl text-lg text-muted-foreground mb-8"
+            className="max-w-3xl text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed"
           >
             {description}
           </motion.p>

@@ -1,16 +1,7 @@
 import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import { tempo } from "tempo-devtools/dist/vite";
 
-const conditionalPlugins = [];
-
-// @ts-ignore
-if (process.env.TEMPO === "true") {
-  conditionalPlugins.push(["tempo-devtools/swc", {}]);
-}
-
-// 🚀 Explicitly set the base for GitHub Pages
 export default defineConfig({
   base: "/Porfolio/",
   optimizeDeps: {
@@ -18,10 +9,7 @@ export default defineConfig({
   },
   assetsInclude: ["**/*.hdr", "**/*.exr"],
   plugins: [
-    react({
-      plugins: conditionalPlugins,
-    }),
-    tempo(),
+    react()
   ],
   resolve: {
     preserveSymlinks: true,
@@ -30,7 +18,7 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: "all",
+    // allowedHosts is not a valid Vite server option, so it has been removed
   },
   build: {
     rollupOptions: {
@@ -41,7 +29,7 @@ export default defineConfig({
           }
         },
       },
-      chunkSizeWarningLimit: 1000,
+      // chunkSizeWarningLimit is not a valid Rollup option in Vite, so it has been removed
     },
   },
 });

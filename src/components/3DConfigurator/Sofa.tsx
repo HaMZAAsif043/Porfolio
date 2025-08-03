@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 // import glb from "./Sofa.glb"
 import { useEffect,useRef } from 'react'
 export function Sofa(props) {
-  const { nodes, materials } = useGLTF("https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/Sofa.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvU29mYS5nbGIiLCJpYXQiOjE3NDYwMTA0ODksImV4cCI6MjA2MTM3MDQ4OX0.-o7X8bVr33cTy2sNbJ6hJhNskEZs3VtzBrhwX0hW1Gk")
+  const { nodes, materials } = useGLTF("https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049446/sofa-draco_saoadx.glb")
       const Stands = useRef(null);
       const Cussion002 = useRef(null);
       const Cussion001 = useRef(null);
@@ -62,4 +62,4 @@ export function Sofa(props) {
   )
 }
 
-useGLTF.preload('https://nrfofydoketfepkipdst.supabase.co/storage/v1/object/sign/threedconfigurator/Sofa.glb?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5XzU3NDY4ODg5LWUzMGYtNGU5Yy1hYTUxLTcwZDIyM2U4MWFlNiJ9.eyJ1cmwiOiJ0aHJlZWRjb25maWd1cmF0b3IvU29mYS5nbGIiLCJpYXQiOjE3NDYwMTA0ODksImV4cCI6MjA2MTM3MDQ4OX0.-o7X8bVr33cTy2sNbJ6hJhNskEZs3VtzBrhwX0hW1Gk')
+useGLTF.preload('https://res.cloudinary.com/duzgdiwwb/image/upload/v1754049446/sofa-draco_saoadx.glb')

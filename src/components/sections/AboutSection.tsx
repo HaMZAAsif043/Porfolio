@@ -20,8 +20,8 @@ interface AboutSectionProps {
 }
 
 const AboutSection = ({
-  bio = "I'm Hamza Asif, a passionate developer specializing in React, Next.js, and 3D web technologies. With 8 months of experience in React and Next.js, and 1 year in Three.js and Python, I focus on creating immersive user experiences that combine cutting-edge frontend technologies with AI integration. I've been working at Blenspark since September 2023, initially as an intern for one month and now as a developer. I've developed 3D configurators, travel websites, and integrated chatbots. Currently, I'm pursuing a BS in AI at the University of Management and Technology, Lahore, in my 6th semester.",
-  resumeUrl = "/resume.pdf",
+  bio = "I'm a passionate frontend developer at Blenspark, specializing in creating immersive 3D configurators using React Three Fiber and exploring AI + Blockchain integration. With expertise in React, Next.js, and Three.js, I love building interactive web experiences that blend cutting-edge design with deep tech. Currently pursuing BS in AI at UMT Lahore while developing production-ready applications that push the boundaries of web technology.",
+  resumeUrl = "/Portfolio/Hamza_Asif_Resume_Updated-1.pdf",
   socialLinks = {
     github: "https://github.com/HaMZAAsif043",
     linkedin: "https://linkedin.com/in/hamzaasif043",
@@ -38,16 +38,16 @@ const AboutSection = ({
     "Python",
     "Django",
     "AI/ML",
-    "3D Modeling",
     "Responsive Design",
   ],
   interests = [
-    "3D Graphics",
     "AI Development",
     "Open Source",
-    "Game Development",
     "Interactive Experiences",
-    "Teaching",
+    "LLM",
+    "NLP",
+    "Frontend Performance",
+    "Backend Integration",
   ],
 }: AboutSectionProps) => {
   return (
@@ -58,12 +58,15 @@ const AboutSection = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center mb-12"
+          className="flex flex-col items-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
             About Me
           </h2>
-          <div className="w-20 h-1 bg-primary rounded mb-8"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mb-4"></div>
+          <p className="text-lg text-muted-foreground text-center max-w-2xl">
+            Get to know the person behind the code
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -75,9 +78,9 @@ const AboutSection = ({
             transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-2"
           >
-            <div className="bg-card rounded-lg p-6 shadow-sm border border-border/50 h-full">
-              <h3 className="text-xl font-semibold mb-4">Biography</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+            <div className="bg-gradient-to-br from-card to-card/50 rounded-xl p-8 shadow-lg border border-border/50 h-full hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-2xl font-bold mb-6 text-primary">My Story</h3>
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
                 {bio}
               </p>
 
@@ -108,9 +111,9 @@ const AboutSection = ({
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="bg-card rounded-lg p-6 shadow-sm border border-border/50 h-full">
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-4">Connect With Me</h3>
+            <div className="bg-gradient-to-br from-card to-card/50 rounded-xl p-8 shadow-lg border border-border/50 h-full hover:shadow-xl transition-shadow duration-300">
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-6 text-primary">Let's Connect</h3>
                 <div className="flex flex-col space-y-3">
                   {socialLinks.github && (
                     <Button variant="outline" asChild className="justify-start">
@@ -152,19 +155,19 @@ const AboutSection = ({
               <Separator className="my-6" />
 
               <div>
-                <h3 className="text-xl font-semibold mb-4">Skills</h3>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <h3 className="text-xl font-bold mb-4 text-primary">Core Skills</h3>
+                <div className="flex flex-wrap gap-2 mb-8">
                   {skills.map((skill, index) => (
-                    <Badge key={index} variant="secondary">
+                    <Badge key={index} variant="secondary" className="px-3 py-1.5 text-sm hover:bg-primary hover:text-primary-foreground transition-colors duration-200">
                       {skill}
                     </Badge>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-4">Interests</h3>
+                <h3 className="text-xl font-bold mb-4 text-primary">Interests</h3>
                 <div className="flex flex-wrap gap-2">
                   {interests.map((interest, index) => (
-                    <Badge key={index} variant="outline">
+                    <Badge key={index} variant="outline" className="px-3 py-1.5 text-sm hover:bg-primary/10 transition-colors duration-200">
                       {interest}
                     </Badge>
                   ))}

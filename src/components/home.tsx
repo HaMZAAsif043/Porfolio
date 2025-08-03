@@ -80,11 +80,11 @@ const Home = () => {
       {/* Main content */}
       <main>
         {/* Hero Section */}
-        <section id="home">
+        <section id="home" className="max-w-7xl mx-auto">
           <HeroSection
             name="Hamza Asif"
-            title="React & 3D Developer"
-            description="I build interactive web experiences with React, Three.js, and modern web technologies. Specializing in 3D rendering, AI integration, and full-stack development."
+            title="Frontend Developer | 3D Web | AI + Web3 Enthusiast"
+            description="Building immersive 3D + AI experiences at Blenspark. I create interactive web applications that blend cutting-edge design with deep tech."
             socialLinks={{
               github: socialLinks.github,
               linkedin: socialLinks.linkedin,
@@ -100,17 +100,17 @@ const Home = () => {
         </section> */}
 
         {/* Projects Section */}
-        <section id="projects">
+        <section id="projects" className="max-w-7xl mx-auto px-4">
           <ProjectsSection />
         </section>
 
         {/* Skills Section */}
-        <section id="skills">
+        <section id="skills" className="max-w-7xl mx-auto px-4">
           <SkillsSection />
         </section>
 
         {/* About Section */}
-        <section id="about">
+        <section id="about" className="max-w-7xl mx-auto px-4">
           <AboutSection
             socialLinks={{
               github: socialLinks.github,
@@ -121,7 +121,7 @@ const Home = () => {
         </section>
 
         {/* Contact Section */}
-        <section id="contact">
+        <section id="contact" className="max-w-7xl mx-auto px-4">
           <ContactSection
             email={socialLinks.email}
             phone="0321-9519624"
