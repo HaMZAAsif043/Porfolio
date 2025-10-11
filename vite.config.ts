@@ -1,15 +1,15 @@
 import path from "path";
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/Porfolio/",
+  base: "/",
   optimizeDeps: {
-    entries: ["src/main.tsx", "src/tempobook/**/*"],
+    entries: ["src/main.tsx", "src/tempobook/**/*"], // optional
   },
   assetsInclude: ["**/*.hdr", "**/*.exr"],
   plugins: [
-    react()
+    react(),
   ],
   resolve: {
     preserveSymlinks: true,
@@ -18,9 +18,10 @@ export default defineConfig({
     },
   },
   server: {
-    // allowedHosts is not a valid Vite server option, so it has been removed
+    // you can add options like port, proxy, open, etc.
   },
   build: {
+    chunkSizeWarningLimit: 1000, // ✅ put it here instead
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -29,7 +30,6 @@ export default defineConfig({
           }
         },
       },
-      // chunkSizeWarningLimit is not a valid Rollup option in Vite, so it has been removed
     },
   },
 });

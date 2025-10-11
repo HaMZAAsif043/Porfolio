@@ -52,12 +52,12 @@ const Navbar = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/Porfolio/" }, 
+    { name: "Home", href: "/" }, 
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
-    { name: "3D Configurator", href: " /Porfolio/configurator" },
+    { name: "3D Configurator", href: " /configurator" },
   ];
 
   useEffect(() => {

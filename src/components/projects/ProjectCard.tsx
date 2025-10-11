@@ -26,12 +26,13 @@ interface ProjectCardProps {
 const ProjectCard = ({
   title = "E-Commerce Platform",
   description = "A modern e-commerce platform built with React, Redux, and Shopify Storefront API. Features include product filtering, cart management, and checkout.",
-  imageUrl = "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+  imageUrl = "",
   technologies = ["React", "Redux", "Shopify API", "Tailwind CSS"],
   liveUrl = "https://example.com",
   githubUrl = "https://github.com/example/project",
   onClick = () => {},
 }: ProjectCardProps) => {
+
   return (
     <motion.div
       whileHover={{ y: -8, scale: 1.02 }}

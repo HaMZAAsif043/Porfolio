@@ -46,9 +46,9 @@ export const BMW = forwardRef( (props,ref)=> {
     };
 
     Object.values(meshRefs).forEach(ref => {
-      const mesh = ref?.current;
-      if (mesh && mesh.material) {
-        const material = mesh.material;
+      const mesh = ref.current;
+      if (mesh && mesh?.material) {
+        const material = mesh?.material;
         material.map = null;
         material.needsUpdate = true;
       }
