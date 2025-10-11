@@ -3,25 +3,32 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/",
+  // 👇 Important: set this to match your GitHub repo name
+  base: "/Porfolio/",
+
   optimizeDeps: {
     entries: ["src/main.tsx", "src/tempobook/**/*"], // optional
   },
+
   assetsInclude: ["**/*.hdr", "**/*.exr"],
+
   plugins: [
     react(),
   ],
+
   resolve: {
     preserveSymlinks: true,
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
+
   server: {
-    // you can add options like port, proxy, open, etc.
+    // optional server configs (e.g. port, proxy)
   },
+
   build: {
-    chunkSizeWarningLimit: 1000, // ✅ put it here instead
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks(id) {
